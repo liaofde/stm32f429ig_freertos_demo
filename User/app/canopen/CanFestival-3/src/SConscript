@@ -1,0 +1,10 @@
+
+import os
+
+Import('env')
+
+excluded_files = ['symbols.c']
+src = [x for x in Glob('*.c') if os.path.basename(str(x)) not in excluded_files]
+
+objs = env.Object(src)       
+Return('objs')

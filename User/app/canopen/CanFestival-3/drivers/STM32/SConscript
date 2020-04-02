@@ -1,0 +1,7 @@
+
+import os
+
+Import('env')
+src = Glob('*.c')
+objs = env.Object(src)       
+Return('objs')
